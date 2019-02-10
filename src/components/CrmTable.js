@@ -4,6 +4,7 @@ import "react-table/react-table.css";
 import ReactTable from "react-table";
 import axios from 'axios';
 import matchSorter from 'match-sorter'
+import dotenv from 'dotenv';
 
 class CRM extends Component {
 
@@ -14,7 +15,7 @@ class CRM extends Component {
         token: sessionStorage.getItem('token')
     }}
     
-      axios.get('http://cmp-backend.ap-southeast-2.elasticbeanstalk.com/protected/crm', config)
+      axios.get(`https://cmp-backend.herokuapp.com/protected/crm`, config)
           .then(resp => {
               console.log(resp.data)
               this.setState({ crm: resp.data })
@@ -86,9 +87,7 @@ class CRM extends Component {
               }
 
               data.push(obj)
-            // else {
-                
-            // }
+
             }})}
         <ReactTable
             data={data}

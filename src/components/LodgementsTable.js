@@ -3,7 +3,7 @@ import '../styles/globalTableStyles.css';
 import FiscalYear from './FiscalYear';
 import axios from 'axios';
 import FormUpdate from './FormUpdate'
-
+import dotenv from 'dotenv'
 
 class LodgementsTable extends Component {
 
@@ -26,7 +26,7 @@ class LodgementsTable extends Component {
       token: sessionStorage.getItem('token')
     }}
     // console.log('fetching data')
-    axios.get('http://cmp-backend.ap-southeast-2.elasticbeanstalk.com/protected/lodgements', config)
+    axios.get(`https://cmp-backend.herokuapp.com/protected/lodgements`, config)
     .then(resp => {
         console.log(resp.data)
         this.setState({ lodgements: resp.data })

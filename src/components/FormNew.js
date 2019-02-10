@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../styles/Form.css';
 import axios from 'axios';
+import dotenv from 'dotenv';
 
 const Status = "LEAD"
 const Dates = Date()
@@ -31,7 +32,7 @@ class Form extends Component {
         console.log(this.state)
 
         const { statusDate, customerName, status, referrer, source, category, lender, history, dateOfLead, isActive, amount, employee } = this.state
-        const url = "http://cmp-backend.ap-southeast-2.elasticbeanstalk.com/protected/leads/new-lead"
+        const url = `https://cmp-backend.herokuapp.com/protected/leads/new-lead`
 
         const data = { statusDate, customerName, status, referrer, source, category, lender, history, dateOfLead, isActive, amount, employee }
         

@@ -3,6 +3,7 @@ import '../styles/Login.css'
 import logo from '../assets/CMP_Logo_White.png'
 import axios from 'axios'
 import { Redirect } from 'react-router-dom'
+import dotenv from 'dotenv'
 // axios.defaults.withCredentials = true
 
 class Login extends Component {
@@ -16,7 +17,7 @@ class Login extends Component {
   submitForm = (e) => {
     e.preventDefault()
     const { username, password } = (this.state)
-    const url = "http://cmp-backend.ap-southeast-2.elasticbeanstalk.com/auth/login";
+    const url = `https://cmp-backend.herokuapp.com/auth/login`;
     const data = {
       username, 
       password

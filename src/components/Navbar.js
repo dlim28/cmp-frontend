@@ -3,7 +3,7 @@ import '../styles/NavbarCM.css';
 import logo from '../assets/CMP_FullLogo.png'
 import { NavLink, Link } from 'react-router-dom'
 import axios from 'axios';
-
+import dotenv from 'dotenv'
 class Navbar extends Component {
 
     state = { 
@@ -15,7 +15,7 @@ class Navbar extends Component {
             token: sessionStorage.getItem('token')
         }}
         // console.log('fetching data')
-        axios.get('http://cmp-backend.ap-southeast-2.elasticbeanstalk.com/protected/navbar', config)
+        axios.get(`https://cmp-backend.herokuapp.com/protected/navbar`, config)
         .then(resp => {
             // console.log(resp.data)
             this.setState({ navbars: resp.data })

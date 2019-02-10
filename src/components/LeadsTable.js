@@ -3,7 +3,7 @@ import '../styles/globalTableStyles.css';
 import FiscalYear from './FiscalYear';
 import axios from 'axios';
 import FormUpdate from './FormUpdate'
-
+import dotenv from 'dotenv'
 
 class LeadsTable extends Component {
 
@@ -28,7 +28,7 @@ class LeadsTable extends Component {
             token: sessionStorage.getItem('token')
         }}
         // console.log('fetching data')
-        axios.get('http://cmp-backend.ap-southeast-2.elasticbeanstalk.com/protected/leads/all', config)
+        axios.get(`https://cmp-backend.herokuapp.com/protected/leads/all`, config)
         .then(resp => {
             console.log(resp.data)
             this.setState({ leads: resp.data })

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import '../styles/globalTableStyles.css';
 import FiscalYear from './FiscalYear';
 import axios from 'axios';
-
+import dotenv from 'dotenv';
 class EmployeeLeaderboard extends Component {
 
     state = { leads: [] }
@@ -12,7 +12,7 @@ class EmployeeLeaderboard extends Component {
             token: sessionStorage.getItem('token')
         }}
         // console.log('fetching data')
-        axios.get('http://cmp-backend.ap-southeast-2.elasticbeanstalk.com/protected/leads/employee-leaderboard', config)
+        axios.get(`https://cmp-backend.herokuapp.com/protected/leads/employee-leaderboard`, config)
         .then(resp => {
             console.log(resp.data)
             this.setState({ leads: resp.data })
