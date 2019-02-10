@@ -4,7 +4,7 @@ import "react-table/react-table.css";
 import ReactTable from "react-table";
 import axios from 'axios';
 import matchSorter from 'match-sorter'
-import dotenv from 'dotenv';
+;
 
 class CRM extends Component {
 

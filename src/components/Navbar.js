@@ -3,7 +3,7 @@ import '../styles/NavbarCM.css';
 import logo from '../assets/CMP_FullLogo.png'
 import { NavLink, Link } from 'react-router-dom'
 import axios from 'axios';
-import dotenv from 'dotenv'
+
 class Navbar extends Component {
 
     state = { 

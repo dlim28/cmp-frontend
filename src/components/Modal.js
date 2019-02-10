@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/Modal.css';
 import axios from 'axios';
-import dotenv from 'dotenv'
+
 
 const subFunction = function(props, isActive = true) {
     console.log("In subFunction")

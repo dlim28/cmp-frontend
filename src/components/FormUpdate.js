@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import '../styles/Form.css';
 import axios from 'axios';
 import Modal from './Modal'
-import dotenv from 'dotenv';
+;
 
 class FormUpdate extends Component {
     state = {

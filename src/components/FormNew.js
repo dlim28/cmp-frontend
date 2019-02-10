@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../styles/Form.css';
 import axios from 'axios';
-import dotenv from 'dotenv';
+;
 
 const Status = "LEAD"
 const Dates = Date()

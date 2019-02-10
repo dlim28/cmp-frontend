@@ -3,7 +3,7 @@ import '../styles/Login.css'
 import logo from '../assets/CMP_Logo_White.png'
 import axios from 'axios'
 import { Redirect } from 'react-router-dom'
-import dotenv from 'dotenv'
+
 // axios.defaults.withCredentials = true
 
 class Login extends Component {

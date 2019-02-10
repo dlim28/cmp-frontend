@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import '../styles/globalTableStyles.css';
 import FiscalYear from './FiscalYear';
 import axios from 'axios';
-import dotenv from 'dotenv'
+
 class ReferrerLeaderboard extends Component {
 
     state = { leads: [] }
